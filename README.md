@@ -1,23 +1,30 @@
-# Práctica de Hilos - Programación Concurrente
+# Práctica: Programación Concurrente - Hilos en Java
 
-Este repositorio contiene la implementación y comparación de diferentes enfoques para la programación concurrente en Java, utilizando como problema base la suma de los elementos de un arreglo de manera secuencial y paralela.
 
-## Estructura del Repositorio
-
-El proyecto se compone de los siguientes archivos fuente:
-
-* **`SumaArreglo.java`**: Versión secuencial base que recorre el arreglo y acumula sus elementos en una sola variable.
-* **`SumaArregloThread.java`**: Versión concurrente donde cada hilo hereda directamente de la clase `Thread` y sobrescribe el método `run()`.
-* **`SumaArregloRunnable.java`**: Versión concurrente donde las tareas implementan la interfaz `Runnable` y se ejecutan mediante objetos `Thread` separados.
-* **`SumaArregloCallable.java`**: Versión avanzada que utiliza la interfaz genérica `Callable<Integer>`, administrada mediante un `ExecutorService` (pool de hilos) y objetos `Future` para recuperar los resultados de manera directa.
+##  Prerrequisitos y Requisitos del Sistema
+Para compilar y ejecutar los programas de este repositorio, asegúrate de contar con:
+- **Java Development Kit (JDK)** instalado (versión 8 o superior recomendada).
+- Una terminal compatible con comandos Unix/Linux o PowerShell.
 
 ---
 
-## Compilación y Ejecución de los Programas
+## Estructura del Repositorio
 
-Para compilar y ejecutar cualquiera de los programas, abre una terminal en la carpeta raíz del repositorio y utiliza los siguientes comandos:
+El repositorio se encuentra organizado de la siguiente manera:
+- `SumaArreglo.java` - Solución secuencial base para la suma de los elementos de un arreglo.
+- `SumaArregloThread.java` - Versión concurrente utilizando herencia directa de la clase `Thread`.
+- `SumaArregloRunnable.java` - Versión concurrente implementando la interfaz `Runnable`.
+- `SumaArregloCallable.java` - Versión concurrente basada en `Callable`, `ExecutorService` y `Future`.
+- `NReinasSecuencial.java` - Solución secuencial mediante backtracking para calcular el total de soluciones de las N-Reinas.
+- `.gitignore` - Archivo de exclusión para directorios de compilación (`out/`, `build/`, `*.class`) y configuraciones de IDEs.
 
-### 1. Solución Secuencial
-* **Compilación:**
-  ```bash
-  javac SumaArreglo.java
+---
+
+## Instrucciones de Compilación y Ejecución
+
+Ubícate en la raíz del repositorio y utiliza los siguientes comandos en tu terminal:
+
+### 1. Suma de Arreglo (Secuencial)
+```bash
+javac SumaArreglo.java
+java SumaArreglo 20
